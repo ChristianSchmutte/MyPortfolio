@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1436ECC222705A8D00D6A9AF /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436ECC122705A8D00D6A9AF /* Stock.swift */; };
+		1436ECC622709CC300D6A9AF /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436ECC522709CC300D6A9AF /* APIRequests.swift */; };
 		143C1EC2227048D8001D5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C1EC1227048D8001D5141 /* AppDelegate.swift */; };
 		143C1EC7227048D8001D5141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143C1EC5227048D8001D5141 /* Main.storyboard */; };
 		143C1ECA227048D8001D5141 /* MyPortfolio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 143C1EC8227048D8001D5141 /* MyPortfolio.xcdatamodeld */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1436ECC122705A8D00D6A9AF /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		1436ECC522709CC300D6A9AF /* APIRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		143C1EBE227048D8001D5141 /* MyPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143C1EC1227048D8001D5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		143C1EC6227048D8001D5141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		143C1ED6227048E5001D5141 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1436ECC522709CC300D6A9AF /* APIRequests.swift */,
 				143C1EC8227048D8001D5141 /* MyPortfolio.xcdatamodeld */,
 				1436ECC122705A8D00D6A9AF /* Stock.swift */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				143C1ECA227048D8001D5141 /* MyPortfolio.xcdatamodeld in Sources */,
 				143C1EE2227050C7001D5141 /* EditStockViewController.swift in Sources */,
+				1436ECC622709CC300D6A9AF /* APIRequests.swift in Sources */,
 				143C1EDE22704981001D5141 /* ChartViewController.swift in Sources */,
 				1436ECC222705A8D00D6A9AF /* Stock.swift in Sources */,
 				143C1EC2227048D8001D5141 /* AppDelegate.swift in Sources */,

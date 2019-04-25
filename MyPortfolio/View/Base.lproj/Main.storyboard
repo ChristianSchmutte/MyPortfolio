@@ -48,7 +48,13 @@
                             <outlet property="delegate" destination="iZW-2R-FEi" id="RgV-Ce-DxZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cP3-pO-VwQ"/>
+                    <navigationItem key="navigationItem" id="cP3-pO-VwQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hfJ-yf-LTF">
+                            <connections>
+                                <action selector="addStockButton:" destination="iZW-2R-FEi" id="PFc-zO-f6w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlb-t9-wLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +76,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1F-Zo-oH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065.217391304348" y="-572.54464285714278"/>
+            <point key="canvasLocation" x="880" y="-573"/>
         </scene>
     </scenes>
 </document>

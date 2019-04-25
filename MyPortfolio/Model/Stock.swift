@@ -18,4 +18,6 @@ class Stock : Object {
         return price * Double(amount)
     }
     
+    
 }
+

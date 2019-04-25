@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+
 
 class PortfolioTableViewController: UITableViewController {
     
@@ -20,7 +20,9 @@ class PortfolioTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        controller.increaseAmountOfStock(stock: stockArray[0], by: 5)
+        title = "Total: \(controller.getPortfolioTotal())"
+        
+        controller.increaseAmountOfStock(stock: stockArray[0], by: 6)
 //        print(controller.getPortfolioTotal())
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
     }
@@ -43,5 +45,35 @@ class PortfolioTableViewController: UITableViewController {
     }
 
 
-
+    @IBAction func addStockButton(_ sender: Any) {
+        var stockNameTextField = UITextField()
+        var stockPriceTextField = UITextField()
+        let alert = UIAlertController(title: "Add Stock", message: nil, preferredStyle: .alert)
+        alert.addTextField { (companyName) in
+            companyName.placeholder = "Company name"
+            companyName.layoutMargins.bottom = 20
+            stockNameTextField = companyName
+        }
+        alert.addTextField { (price) in
+            price.placeholder = "9999.99"
+            price.keyboardType = .decimalPad
+            stockPriceTextField = price
+        }
+        let addStockAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            guard let stockPriceDouble = Double(stockPriceTextField.text!) else {fatalError("Could not convert textfield into number")}
+            guard let stockName = stockNameTextField.text else {fatalError("BITCH, check again, no string from texfield")}
+            
+            self.controller.createStock(companyName: stockName, price: stockPriceDouble)
+            self.tableView.reloadData()
+        }
+        let cancelAlert = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(addStockAction)
+        alert.addAction(cancelAlert)
+        
+        present(alert, animated: true)
+    }
+    
 }
